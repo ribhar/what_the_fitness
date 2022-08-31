@@ -10,23 +10,8 @@ function App() {
       <Nav/>
       <Banner/>
       
-      {/* <Footer/> */}
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
-      <h1>Sample</h1>
+      <Footer/>
+     
     </div>
   );
 }
