@@ -2,7 +2,9 @@
   font-family: sans-serif;
   color: white;
   box-sizing: border-box;
-  /* background-color: black; */
+  margin: 0;
+  padding: 0;
+  
 }
 * {
   -webkit-touch-callout: none; 
@@ -11,9 +13,15 @@
   -moz-user-select: none;
   -ms-user-select: none; 
    user-select: none; 
+   
+}
+body{
+  background-color: #080808;
 }
 .App {
   text-align: center;
+
+  
 }
 
 .App-logo {
@@ -49,4 +57,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+body::-webkit-scrollbar {
+  width: 9px;
+  /* display: none; */
+  
+}
+
+body::-webkit-scrollbar-track {
+  display:none;
+}
+
+ 
+body::-webkit-scrollbar-thumb {
+  display: none;
+  background: #FF002E; 
+  border-radius: 10px;
+}
+
+body{
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: overlay;
 }
