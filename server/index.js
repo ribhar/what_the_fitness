@@ -22,7 +22,7 @@ app.get("/",(req,res)=>{
 app.listen(process.env.PORT, async()=>{
     try{
         await connection
-        console.log(`Server is running at localhost onon port ${process.env.PORT}`)
+        console.log(`Server is running at localhost on port ${process.env.PORT}`)
     }
     catch(err){
         console.log(`Error in running server on ${process.env.PORT}`)

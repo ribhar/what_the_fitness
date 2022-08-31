@@ -1,12 +1,10 @@
 const { Schema, model } = require("mongoose"); // To create database table
 
-const mongoose = require("mongoose"); // To connect database
-
 const randome = require("random-string-generator"); // To generate unique uid
 
 const { isEmail } = require("validator"); // To validate emails
 
-const { ObjectId } = mongoose.Schema.Types;
+
 
 const userSchema = new Schema({
   uid: { 

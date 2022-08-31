@@ -111,7 +111,7 @@ module.exports.loginUser=async(req,res,next)=>{
 
     return res.status(501)
     .json({ 
-        error: "Error" 
+        error: "User doesn't exist" 
     });
 
   } 
@@ -119,12 +119,12 @@ module.exports.loginUser=async(req,res,next)=>{
     if(user.role===role){
 
       await bcrypt.compare(password,user.password)
-        .then((r)=>{
-          if(r){
+        .then((rres)=>{
+          if(rres){
 
             let token=jwt.sign(
               {id: user._id, email: user.email},
-              process.env.JWT_SECRET,
+              process.env.JWT_SECRET_KEY,
               {expiresIn: "30 days"}
             );
 
@@ -137,15 +137,14 @@ module.exports.loginUser=async(req,res,next)=>{
           }else{
 
             return res.status(501)
-            .send("Invalid Password");
+            .send("Provided password is incorrect");
 
           }
         })
         .catch((err)=>{
 
           return res.status(501)
-          .next(err);
-
+          .send(err);
         });
 
     }else{
@@ -189,7 +188,7 @@ module.exports.userData=async(req,res,next)=>{
 
 
 // Function to get all users
-module.exports.getAllUsers=async(req,res,next)=>{
+module.exports.getUsers=async(req,res,next)=>{
 
   const {name,email,mobile,status,role}=req.query;
 
