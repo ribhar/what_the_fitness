@@ -1,0 +1,25 @@
+.nav{
+    background-color: black;
+}
+.container{
+    margin: auto;
+    height: 65px;
+    width: 85%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+.logo{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.logo>img{
+    width: 80%;
+}
+.columns{
+border: 1px solid yellow;
+}
