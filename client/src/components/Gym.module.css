@@ -1,0 +1,109 @@
+.head1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.head2{
+    font-size: 25px;
+    color: #D5D5D5;
+}
+.head2A{
+    font-size: 25px;
+    color: white;
+    
+}
+.head3{
+    font-size: 20px;
+    color: #D5D5D5;
+    margin: 30px 0;
+}
+.head4{
+    text-align: center;
+    font-size: 20px;
+    color: #D5D5D5;
+    margin: 30px 0;
+}
+.locon{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.ratings{
+    background-color: #920909;
+    width: 180px;
+    height: 70px;
+}
+.ratings>p:first-child{
+    font-size: 30px;
+}
+.ratings>p:last-child{
+    font-size: 18px;
+}
+.container{
+    margin: 200px auto;
+    width: 94%;
+   
+}
+.headcon{
+    display: flex;
+    justify-content: space-between;
+}
+.main{
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.main>:first-child{
+    width: 48%;
+    text-align: start;
+}
+
+.main>:last-child{
+    width: 48%;
+    background-color: #2E2E2E;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.faci{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    margin: 30px 0;
+}
+.cardcon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    margin: 30px 0;
+}
+.card{
+    
+    background-color: #920909;
+    border-radius: 5px;
+    width: 150px;
+    height: 170px;
+}
+.plan{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 150px;
+    margin: 20px 0;
+    border: 3px solid white;
+    border-radius: 10px;
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.planhead{ 
+    
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+}

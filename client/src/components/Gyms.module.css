@@ -112,6 +112,7 @@
     flex-direction: column;
     gap:20px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .gymcon>.gym{
     padding: 20px;

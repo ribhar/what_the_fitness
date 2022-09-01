@@ -32,9 +32,11 @@ const Gyms = () => {
     }, [filter]);
   
     useEffect(()=>{
-      axios.get(`https://devapi.wtfup.me/gym/places`).then(({data})=>setData2(data.data))
-        .catch((error)=>console.log(error));
+
+      axios.get(`https://devapi.wtfup.me/gym/places`).then(({data})=>setData2(data.data)).catch((error)=>console.log(error));
+
     }, []);
+
     return (
       <>
         {loading ? (
@@ -61,16 +63,21 @@ const Gyms = () => {
                     </select>
                 </div>
                 <div className={styles.gymcon}>
-                    {data && data.map((el, ind) => {
+                    {data && data.map((el, ind)=>{
                         return (
-                        <div key={ind} className={styles.gym} onClick={()=>navigate(`/${el.user_id}`)} >
+                        <div key={ind} className={styles.gym}  >
                             <div className={styles.empty}></div>
                             <div className={styles.detail}>
                                 <h2>{el.gym_name}</h2>
                                 <p>★★★★★</p>
                                 <p> {el.address1} , {el.address2}, {el.city} </p>
                                 <div> <FiNavigation/>{el.duration_text} | {el.distance_text} </div>
-                                <div><button className={styles.bookbtn}>Book Now</button> </div>
+                                <div>
+                                  <button onClick={()=>{
+                                        localStorage.setItem("facilities",JSON.stringify(el))
+                                        navigate(`/${el.user_id}`)
+                                      }} className={styles.bookbtn}>Book Now</button> 
+                                </div>
                             </div>   
                         </div>
                         );
